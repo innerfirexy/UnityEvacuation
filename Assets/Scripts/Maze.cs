@@ -35,15 +35,6 @@ public class Maze : MonoBehaviour {
         }
     }
 
-    private void CreateCell(IntVector2 coordinates) {
-        MazeCell newCell = Instantiate(cellPrefab) as MazeCell;
-        cells[coordinates.x, coordinates.z] = newCell;
-        newCell.coordinates = coordinates;
-        newCell.name = "Maze Cell " + coordinates.x + ", " + coordinates.z;
-        newCell.transform.parent = transform;
-        newCell.transform.localPosition = new Vector3(coordinates.x - size.x * 0.5f + 0.5f, 0f, coordinates.z - size.z * 0.5f + 0.5f);
-    }
-
     public IEnumerator GenerateRandom()
     {
         WaitForSeconds delay = new WaitForSeconds(generationStepDelay);
@@ -55,5 +46,23 @@ public class Maze : MonoBehaviour {
             CreateCell(coordinates);
             coordinates += MazeDirections.RandomValue.ToIntVector2();
         }
+    }
+
+
+    private void CreateCell(IntVector2 coordinates) {
+        MazeCell newCell = Instantiate(cellPrefab) as MazeCell;
+        cells[coordinates.x, coordinates.z] = newCell;
+        newCell.coordinates = coordinates;
+        newCell.name = "Maze Cell " + coordinates.x + ", " + coordinates.z;
+        newCell.transform.parent = transform;
+        newCell.transform.localPosition = new Vector3(coordinates.x - size.x * 0.5f + 0.5f, 0f, coordinates.z - size.z * 0.5f + 0.5f);
+    }
+
+    private void CreatePassage(MazeCell cell, MazeCell otherCell, MazeDirection direction)
+    {
+        MazePassage passage = Instantiate(passagePrefab) as MazePassage;
+        passage.Initialize(cell, otherCell, direction);
+        passage = Instantiate(passagePrefab) as MazePassage;
+        passage.Initialize(otherCell, cell, direction);
     }
 }
