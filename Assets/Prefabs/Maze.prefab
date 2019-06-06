@@ -26,7 +26,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4293399132984840
 Transform:
   m_ObjectHideFlags: 1
@@ -51,3 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68880687e1c18480ca68693260016b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size:
+    x: 0
+    z: 0
+  cellPrefab: {fileID: 0}
+  passagePrefab: {fileID: 0}
+  wallPrefab: {fileID: 0}
+  generationStepDelay: 0

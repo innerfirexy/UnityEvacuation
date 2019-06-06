@@ -18,4 +18,8 @@ public struct IntVector2 {
         a.z += b.z;
         return a;
     }
+
+    public override string ToString() {
+        return System.String.Format("({0},{1})", x, z);
+    }
 }
