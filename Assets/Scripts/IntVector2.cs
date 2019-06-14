@@ -1,25 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-[System.Serializable]
+﻿[System.Serializable]
 public struct IntVector2 {
-    public int x, z;
 
-    public IntVector2(int x, int z)
-    {
-        this.x = x;
-        this.z = z;
-    }
+	public int x, z;
 
-    public static IntVector2 operator + (IntVector2 a, IntVector2 b)
-    {
-        a.x += b.x;
-        a.z += b.z;
-        return a;
-    }
+	public IntVector2 (int x, int z) {
+		this.x = x;
+		this.z = z;
+	}
 
-    public override string ToString() {
-        return System.String.Format("({0},{1})", x, z);
-    }
+	public static IntVector2 operator + (IntVector2 a, IntVector2 b) {
+		a.x += b.x;
+		a.z += b.z;
+		return a;
+	}
 }

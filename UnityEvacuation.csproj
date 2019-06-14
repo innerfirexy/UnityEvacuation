@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5AC61F13-E015-33BF-B179-8CBB22B7B668}</ProjectGuid>
+    <ProjectGuid>{57369D6A-C2CE-40EC-4C65-F928E57D31FE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -257,9 +257,14 @@
     <Compile Include="Assets\Scripts\IntVector2.cs" />
     <Compile Include="Assets\Scripts\Maze.cs" />
     <Compile Include="Assets\Scripts\MazeCell.cs" />
+    <Compile Include="Assets\Scripts\MazeCellAccessory.cs" />
     <Compile Include="Assets\Scripts\MazeCellEdge.cs" />
     <Compile Include="Assets\Scripts\MazeDirection.cs" />
+    <Compile Include="Assets\Scripts\MazeDoor.cs" />
     <Compile Include="Assets\Scripts\MazePassage.cs" />
+    <Compile Include="Assets\Scripts\MazeRoom.cs" />
+    <Compile Include="Assets\Scripts\MazeRoomSettings.cs" />
+    <Compile Include="Assets\Scripts\MazeStairs.cs" />
     <Compile Include="Assets\Scripts\MazeWall.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Yurowm\Demo\Scripts\Actions.cs" />
